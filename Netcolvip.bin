@@ -7,7 +7,26 @@ sleep 2s
 # Actualiza el sistema limpio y elimina los paquetes obsoletos. 
 sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
 
- case $choice in
+# Comprueba si figlet y lolcat están instalados, y si no lo están, instala.
+if ! command -v figlet &> /dev/null; then
+    echo "Figlet no está instalado . Instalando..."
+    sudo apt-get install figlet -y
+fi
+
+if ! command -v lolcat &> /dev/null; then
+    echo "Lolcat no está instalado. Instalando..."
+    sudo apt-get install lolcat -y
+fi
+
+while true; do
+    clear
+    figlet -c -f slant "WS-PRO"
+    echo -e "\033[1;37m[\033[1;31m01\033[1;37m] \033[1;37m• \033[1;36mInstalar Ws-Pro\033[0m"
+    echo -e "\033[1;37m[\033[1;31m00\033[1;37m] \033[1;37m• \033[1;31mSALIR\033[0m"
+
+    read -p "ELIGE UNA OPCIÓN : " choice
+
+    case $choice in
         1)
             echo "Disfruta de CLOUDFARED FREE"
             sleep 2s
