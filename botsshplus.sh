@@ -1834,7 +1834,7 @@ ShellBot.regHandleFunction --function fun_backauto --callback_data _autobkp
 ShellBot.regHandleFunction --function relatorio_rev --callback_data _relatorio
 ShellBot.regHandleFunction --function fun_ajuda --callback_data _ajuda
 ShellBot.regHandleFunction --function fun_menurevenda --callback_data _opcoesrev
-ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
+ShellBot.regHandleFunction --function enviarapp --callback_data _appenviar
 unset keyboard1
 keyboard1="$(ShellBot.InlineKeyboardMarkup -b 'menu1')"
 
@@ -1866,7 +1866,7 @@ ShellBot.regHandleFunction --function fun_exp_user --callback_data _expirados2
 ShellBot.regHandleFunction --function relatorio_rev --callback_data _relatorio2
 ShellBot.regHandleFunction --function fun_menurevenda --callback_data _opcoesrev2
 ShellBot.regHandleFunction --function fun_ajuda --callback_data _ajuda2
-ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
+ShellBot.regHandleFunction --function enviarapp --callback_data _appenviar
 unset keyboard2
 keyboard2="$(ShellBot.InlineKeyboardMarkup -b 'menu2')"
 
@@ -1894,7 +1894,7 @@ ShellBot.regHandleFunction --function monitor_ssh --callback_data _monitor3
 ShellBot.regHandleFunction --function ver_users --callback_data _verusers3
 ShellBot.regHandleFunction --function fun_exp_user --callback_data _expirados3
 ShellBot.regHandleFunction --function fun_ajuda --callback_data _ajuda3
-ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
+ShellBot.regHandleFunction --function enviarapp --callback_data _appenviar
 unset keyboard3
 keyboard3="$(ShellBot.InlineKeyboardMarkup -b 'menu3')"
 
@@ -1913,7 +1913,7 @@ ShellBot.regHandleFunction --function fun_lim_rev --callback_data _limrev
 ShellBot.regHandleFunction --function fun_dat_rev --callback_data _datrev
 ShellBot.regHandleFunction --function fun_list_rev --callback_data _listrev
 ShellBot.regHandleFunction --function fun_susp_rev --callback _susprevendas
-ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
+ShellBot.regHandleFunction --function enviarapp --callback_data _appenviar
 unset keyboard4
 keyboard4="$(ShellBot.InlineKeyboardMarkup -b 'menu4')"
 
@@ -1944,7 +1944,8 @@ while :; do
                     [[ "${comando[0]}" = "/info" ]] && infouserbot
                     [[ "${comando[0]}" = "/hrlp" || "${comando[0]}" = "/ajuda" || "${comando[0]}" = "/ayuda" ]] && fun_ajuda
                     [[ "${comando[0]}" = "/bot" || "${comando[0]}" = "/sobre" ]] && sobremim
-                    [[ "${comando[0]}" = "/precios" ]] && precios
+                    [[ "${comando[0]}" = "/appenviar" || "${comando[0]}" = "/appnetcol" ]] && appenviar
+		    [[ "${comando[0]}" = "/precios" ]] && precios
                     ;;
                 esac
             fi
