@@ -1815,7 +1815,6 @@ ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'BACKUP USUARIOS'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text "AUTO BACKUP" --callback_data '_autobkp'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'RELATORIO' --callback_data '_relatorio'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text 'AYUDA' --callback_data '_ajuda'
-ShellBot.InlineKeyboardButton --button 'menu1' --line 9 --text 'APP NETCOL' --callback_data 'appenviar'
 ShellBot.regHandleFunction --function fun_adduser --callback_data _criaruser
 ShellBot.regHandleFunction --function fun_add_teste --callback_data _criarteste
 ShellBot.regHandleFunction --function fun_deluser --callback_data _deluser
@@ -1834,7 +1833,6 @@ ShellBot.regHandleFunction --function fun_backauto --callback_data _autobkp
 ShellBot.regHandleFunction --function relatorio_rev --callback_data _relatorio
 ShellBot.regHandleFunction --function fun_ajuda --callback_data _ajuda
 ShellBot.regHandleFunction --function fun_menurevenda --callback_data _opcoesrev
-ShellBot.regHandleFunction --function enviarapp --callback_data _appenviar
 unset keyboard1
 keyboard1="$(ShellBot.InlineKeyboardMarkup -b 'menu1')"
 
@@ -1853,7 +1851,6 @@ ShellBot.InlineKeyboardButton --button 'menu2' --line 5 --text 'CAMBIAR FECHA' -
 ShellBot.InlineKeyboardButton --button 'menu2' --line 5 --text 'REVENTA' --callback_data '_opcoesrev2'
 ShellBot.InlineKeyboardButton --button 'menu2' --line 6 --text 'RELATORIO' --callback_data '_relatorio2'
 ShellBot.InlineKeyboardButton --button 'menu2' --line 6 --text 'AYUDA' --callback_data '_ajuda2'
-ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text 'APP NETCOL' --callback_data 'appenviar'
 ShellBot.regHandleFunction --function fun_adduser --callback_data _criaruser2
 ShellBot.regHandleFunction --function fun_add_teste --callback_data _criarteste2
 ShellBot.regHandleFunction --function fun_deluser --callback_data _deluser2
@@ -1866,7 +1863,6 @@ ShellBot.regHandleFunction --function fun_exp_user --callback_data _expirados2
 ShellBot.regHandleFunction --function relatorio_rev --callback_data _relatorio2
 ShellBot.regHandleFunction --function fun_menurevenda --callback_data _opcoesrev2
 ShellBot.regHandleFunction --function fun_ajuda --callback_data _ajuda2
-ShellBot.regHandleFunction --function enviarapp --callback_data _appenviar
 unset keyboard2
 keyboard2="$(ShellBot.InlineKeyboardMarkup -b 'menu2')"
 
@@ -1883,7 +1879,6 @@ ShellBot.InlineKeyboardButton --button 'menu3' --line 4 --text 'CAMBIAR CLAVE' -
 ShellBot.InlineKeyboardButton --button 'menu3' --line 4 --text 'EXPIRADOS' --callback_data '_expirados3'
 ShellBot.InlineKeyboardButton --button 'menu3' --line 5 --text 'CAMBIAR FECHA' --callback_data '_altdata3'
 ShellBot.InlineKeyboardButton --button 'menu3' --line 5 --text 'AYUDA' --callback_data '_ajuda3'
-ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'APP NETCOL' --callback_data 'appenviar'
 ShellBot.regHandleFunction --function fun_adduser --callback_data _criaruser3
 ShellBot.regHandleFunction --function fun_add_teste --callback_data _criarteste3
 ShellBot.regHandleFunction --function fun_deluser --callback_data _deluser3
@@ -1894,7 +1889,6 @@ ShellBot.regHandleFunction --function monitor_ssh --callback_data _monitor3
 ShellBot.regHandleFunction --function ver_users --callback_data _verusers3
 ShellBot.regHandleFunction --function fun_exp_user --callback_data _expirados3
 ShellBot.regHandleFunction --function fun_ajuda --callback_data _ajuda3
-ShellBot.regHandleFunction --function enviarapp --callback_data _appenviar
 unset keyboard3
 keyboard3="$(ShellBot.InlineKeyboardMarkup -b 'menu3')"
 
