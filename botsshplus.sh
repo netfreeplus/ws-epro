@@ -907,14 +907,14 @@ sobremim() {
 }
 
 #enviar app
-enviarapp() {
-    ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-        --text "♻️ ENVIANDO APLICATIVO..."
-    ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
-        --document "@/root/base.apk" \
-    return 0
+#enviarapp() {
+#    ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
+ #       --text "♻️ ENVIANDO APLICATIVO..."
+  #  ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
+   #     --document "@/root/base.apk" \
+   # return 0
     
-}
+#}
 
 precios() {
     local msg
@@ -1938,8 +1938,9 @@ while :; do
                     [[ "${comando[0]}" = "/info" ]] && infouserbot
                     [[ "${comando[0]}" = "/hrlp" || "${comando[0]}" = "/ajuda" || "${comando[0]}" = "/ayuda" ]] && fun_ajuda
                     [[ "${comando[0]}" = "/bot" || "${comando[0]}" = "/sobre" ]] && sobremim
-                    [[ "${comando[0]}" = "/appenviar" || "${comando[0]}" = "/appnetcol" ]] && appenviar
 		    [[ "${comando[0]}" = "/precios" ]] && precios
+                    [[ "${comando[0]}" = "/appenviar" || "${comando[0]}" = "/appnetcol" ]] && appenviar
+
                     ;;
                 esac
             fi
