@@ -975,11 +975,11 @@ fun_add_teste() {
 
 fun_teste() {
     usuario=$(echo netcol$((RANDOM % +500)))
-    senha='1234'
+    senha=$(echo test$((RANDOM % +500)))
     limite='1'
     t_time=$1
-    ex_date=$(date '+%d/%m/%C%y' -d " +2 days")
-    tuserdate=$(date '+%C%y/%m/%d' -d " +2 days")
+    ex_date=$(date '+%d/%m/%C%y' -d " +15 days")
+    tuserdate=$(date '+%C%y/%m/%d' -d " +15 days")
     [[ -z $t_time ]] && {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
             --text "$(echo -e "❌ error try again")" \
@@ -1021,7 +1021,7 @@ fun_teste() {
         return 0
     } || {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "✅ <b>Creado Exitosamente</b> ✅\n\n♻️SSH Privada ♻️\n\n🔥⚡️⚡️ EL MEJOR SERVICIO ⚡️⚡️🔥\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO MULTILOGIN\n=======================\n\n\nᗚ IP • ๛ $(cat /etc/IP)\nᗚ Username • ๛ <code>$usuario</code>\nᗚ Password • ๛ <code>1234</code>\n\n\nᗚ Dominios\nᗚ Puerto 80 • ๛ <code>f.cerebrocol.com</code>\nᗚ Puerto 443 • ๛ <code>f.netcol.nl</code>\n\n⏳ ᗚ Expire • $t_time $hrs")\n࿂ SSH •  22\n࿂ SSL •  443\n࿂ Squid  •  8080\n࿂ Dropbear •  80\n[-] ═───────◇───────═\n࿂ Badvpn •  7300\n [-] ═───────◇───────═\n›☬ • ═◇ SERVICIOS VIP ◇═ • ☬" \
+            --text "$(echo -e "✅ <b>Creado Exitosamente</b> ✅\n\n♻️SSH Privada ♻️\n\n🔥⚡️⚡️ EL MEJOR SERVICIO ⚡️⚡️🔥\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO MULTILOGIN\n=======================\n\nᗚ Username • ๛ <code>$usuario</code>\nᗚ Password • ๛ <code>1234</code>\n\n\n⏳ ᗚ Expire • $t_time $hrs")\n\n [-] ═───────◇───────═\n›☬ • ═◇ SERVICIOS VIP ◇═ • ☬" \
             --parse_mode html
         return 0
     }
