@@ -1015,13 +1015,13 @@ fun_teste() {
         for arqv in $(ls /etc/bot/arquivos); do
             ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
                 --document "@/etc/bot/arquivos/$arqv" \
-                --caption "$(echo -e "✅ Creado Exitosamente ✅\n\n♻️SSH Privada ♻️\n\n🔥⚡️⚡️ EL MEJOR SERVICIO ⚡️⚡️🔥\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO MULTILOGIN\n=======================\n\n\nᗚ Username • ๛ <code>$usuario</code>\nᗚ Password • ๛ <code>1234</code>\n\n\nᗚ Dominios\nᗚ Puerto 80 • ๛ <code>f.cerebrocol.com</code>\nᗚ Puerto 443 • ๛ <code>f.netcol.nl</code>\n\n⏳ ᗚ Expire • $t_time $hrs")\n࿂ SSH •  22\n࿂ SSL •  443\n࿂ Squid  •  8080\n࿂ Dropbear •  80\n[-] ═───────◇───────═\n࿂ Badvpn •  7300\n [-] ═───────◇───────═\n›☬ • ═◇ SERVICIOS VIP ◇═ • ☬" \
+                --caption "$(echo -e "✅ Creado Exitosamente ✅\n\n♻️SSH Privada ♻️\n\n🔥⚡️⚡️ EL MEJOR SERVICIO ⚡️⚡️🔥\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO MULTILOGIN\n=======================\n\n\nᗚ Username • ๛ <code>$usuario</code>\nᗚ Password • ๛ <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n\n\nᗚ Dominios\nᗚ Puerto 80 • ๛ <code>f.cerebrocol.com</code>\nᗚ Puerto 443 • ๛ <code>f.netcol.nl</code>\n\n⏳ ᗚ Expire • $t_time $hrs")\n࿂ SSH •  22\n࿂ SSL •  443\n࿂ Squid  •  8080\n࿂ Dropbear •  80\n[-] ═───────◇───────═\n࿂ Badvpn •  7300\n [-] ═───────◇───────═\n›☬ • ═◇ SERVICIOS VIP ◇═ • ☬" \
                 --parse_mode html
         done
         return 0
     } || {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "✅ <b>Creado Exitosamente</b> ✅\n\n♻️SSH Privada ♻️\n\n🔥⚡️⚡️ EL MEJOR SERVICIO ⚡️⚡️🔥\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO MULTILOGIN\n=======================\n\nᗚ Username • ๛ <code>$usuario</code>\nᗚ Password • ๛ <code>1234</code>\n\n\n⏳ ᗚ Expire • $t_time $hrs")\n\n [-] ═───────◇───────═\n›☬ • ═◇ SERVICIOS VIP ◇═ • ☬" \
+            --text "$(echo -e "✅ <b>Creado Exitosamente</b> ✅\n\n♻️SSH Privada ♻️\n\n🔥⚡️⚡️ EL MEJOR SERVICIO ⚡️⚡️🔥\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO MULTILOGIN\n=======================\n\nᗚ Username • ๛ <code>$usuario</code>\nᗚ Password • ๛ <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n\n\n⏳ ᗚ Expire • $t_time $hrs")\n\n [-] ═───────◇───────═\n›☬ • ═◇ SERVICIOS VIP ◇═ • ☬" \
             --parse_mode html
         return 0
     }
