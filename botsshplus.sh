@@ -975,7 +975,7 @@ fun_add_teste() {
 
 fun_teste() {
     usuario=$(echo netcol$((RANDOM % +500)))
-    senha=$((RANDOM % +500)))
+    senha='1234'
     limite='1'
     t_time=$1
     ex_date=$(date '+%d/%m/%C%y' -d " +15 days")
